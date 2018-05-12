@@ -59,7 +59,6 @@ class database{
     $query = 'INSERT INTO voucher (amount, code, used, date) VALUES ("' .$voucher. '","' .$code. '", 0 ,"' .$date. '")';
       $pdo ->prepare($query)->execute();
      
-       
    }
    
 }
