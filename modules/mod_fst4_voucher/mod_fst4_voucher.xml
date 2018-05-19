@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3" client="site" method="upgrade">
+    <name>mod_fst4_voucher</name>
+    <author>Bernhauser Richard</author>
+    <creationDate>2018</creationDate>
+    <copyright>Copyright (C) 2018 Bernhauser</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <authorEmail>-</authorEmail>
+    <authorUrl>-</authorUrl>
+    <version>1.0</version>
+
+
+    
+
+    
+    
+    <files>
+        <filename module="mod_fst4_voucher">mod_fst4_voucher.php</filename>
+        <folder>tmpl</folder>
+
+        <filename>index.html</filename>
+        <filename>mod_fst4_voucher.xml</filename>
+        <filename>helper.php</filename>
+
+    </files>
+    
+
+    
+    
+    <config>
+        
+
+        
+    </config>
+
+    
+    
+</extension>
