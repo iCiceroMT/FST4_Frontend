@@ -27,6 +27,79 @@ class database{
     
    }
    
+   protected function makeSync($type, $tablename, $pkeyname, $pkeyvalue, $columns, $values){
+       //die Spaltennamen in einen String und jeweils in einen <string> tag
+       $columnnames = "";
+       $string_o = "<string>";
+       $string_c = "</string>";
+       foreach($columns as $column){
+           $columnnames .= $string_o . $column . $string_c;
+       }
+       //die Werte in einen String und jeweils in einen <string> tag
+       $columnvalues = "";
+       foreach($values as $value){
+           $columnvalues .= $string_o . $value . $string_c;
+       }
+       
+       $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+              CURLOPT_PORT => "80",
+              CURLOPT_URL => "http://localhost/FST4_Sync/CreateWebService.asmx",
+              CURLOPT_RETURNTRANSFER => true,
+              CURLOPT_ENCODING => "",
+              CURLOPT_MAXREDIRS => 10,
+              CURLOPT_TIMEOUT => 30,
+              CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+              CURLOPT_CUSTOMREQUEST => "POST",
+
+              CURLOPT_HTTPHEADER => array(
+                "Cache-Control: no-cache",
+                "Content-Type: text/xml",
+                "Postman-Token: 567c2fff-d9a9-46c0-a548-a694fc974e37"
+              ),
+            ));
+
+            //Hier wird das Soap XML zusammengebaut
+            $data = '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><InsertStatement xmlns="http://tempuri.org/"><statementModel><Type>'
+                    //Type (Insert, etc)
+                    . $type
+                    . '</Type><TableName>'
+                    //Tablename
+                    . $tablename
+                    . '</TableName><PrimaryKeyName>'
+                    //Primary Key Name
+                    . $pkeyname
+                    . '</PrimaryKeyName><PrimaryKeyValue>'
+                    //Primary Key Value
+                    . $pkeyvalue
+                    //Spaltennamen
+                    . '</PrimaryKeyValue><Columns>'
+                    . $columnnames
+                    //Werte
+                    . '</Columns><Values>'
+                    . $columnvalues
+                    . '</Values><Sender>'
+                    //Sender
+                    . 'App'
+                    .'</Sender></statementModel></InsertStatement></soap:Body></soap:Envelope>';
+            
+          // return $data;
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $data); 
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+
+            curl_close($curl);
+
+            if ($err) {
+              return "cURL Error #:" . $err;
+            } else {
+              return $response;
+            }
+       
+   }
+   
    protected function GUID()
         {
             if (function_exists('com_create_guid') === true)
@@ -47,7 +120,7 @@ class database{
        $pdo = $this->connectdb();
        $data = $pdo->query('SELECT * FROM article 
                                      LEFT JOIN rating using(article_id)
-                                     WHERE article_id = ' . $id)->fetchAll(PDO::FETCH_ASSOC);
+                                     WHERE article_id = "' .$id . '"')->fetchAll(PDO::FETCH_ASSOC);
        return $data;
    }
    
@@ -66,9 +139,14 @@ class database{
    public function insertNewVoucher($voucher, $code, $date){
       $pdo = $this->connectdb();
       //$query = "INSERT INTO `voucher` (`voucher_id`, `amount`, `code`, `used`, `date`) VALUES (NULL, ".$voucher.",'".$code."',b'0','".$date."')";
-    $query = 'INSERT INTO voucher (amount, code, used, date) VALUES ("' .$voucher. '","' .$code. '", 0 ,"' .$date. '")';
+    $query = 'INSERT INTO voucher (`amount`, `code`, `used`, `date`) VALUES ("' .$voucher. '","' .$code. '", 0 ,"' .$date. '")';
       $pdo ->prepare($query)->execute();
-     
+      
+     //Sync
+     $cols = array(); $vals = array();
+     array_push($cols, "amount", "code", "used", "date");
+     array_push($vals, $voucher, $code, 0, $date);
+     return $this->makeSync("INSERT", "voucher", "voucher_id", "123456789", $cols, $vals);
    }
    
    public function regNewUser($data){
