@@ -15,7 +15,6 @@ if(ISSET($_POST['pdetails'])){
         $cnt ++;
     }
 
-    
  
 }else{header('Location: http://wi-gate.technikum-wien.at:60336/index.php');}
 
@@ -27,7 +26,7 @@ echo '
         <div class="col-md-5">
             <p>Bezeichnung: ' . $pdetails[0]["description"] . '</p>
             <p>Preis: ' . $pdetails[0]["price"] . '</p>
-            <p>Rating: '; for($i = 1; $i <= 5; $i++ ){if($i <= ($rating / $cnt)){ echo '<span class="fa fa-star checked"></span>'; }else{echo '<span class="fa fa-star"></span>';}}  echo '</p>
+            <p>Rating: '; for($i = 1; $i <= 5; $i++ ){if($i <= ($rating / $cnt)){ echo '<span class="fa fa-star checked"></span>'; }else{ echo '<span class="fa fa-star"></span>';}}  echo '</p>
 
         </div>
         <div class="col-md-3">
