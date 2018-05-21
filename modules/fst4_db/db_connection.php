@@ -138,15 +138,16 @@ class database{
    
    public function insertNewVoucher($voucher, $code, $date){
       $pdo = $this->connectdb();
-      //$query = "INSERT INTO `voucher` (`voucher_id`, `amount`, `code`, `used`, `date`) VALUES (NULL, ".$voucher.",'".$code."',b'0','".$date."')";
-    $query = 'INSERT INTO voucher (`amount`, `code`, `used`, `date`) VALUES ("' .$voucher. '","' .$code. '", 0 ,"' .$date. '")';
+      $guid = $this->GUID();
+      //$query = "INSERT INTO `voucher` (`voucher_id`, `amount`, `code`, `used`, `date`) VALUES (".$voucher.", ".$voucher.",'".$code."',b'0','".$date."')";
+    $query = 'INSERT INTO voucher (`voucher_id`,`amount`, `code`, `used`, `date`) VALUES ("'.$guid. '", "' .$voucher. '","' .$code. '", 0 ,"' .$date. '")';
       $pdo ->prepare($query)->execute();
       
      //Sync
      $cols = array(); $vals = array();
      array_push($cols, "amount", "code", "used", "date");
      array_push($vals, $voucher, $code, 0, $date);
-     return $this->makeSync("INSERT", "voucher", "voucher_id", "123456789", $cols, $vals);
+     return $this->makeSync("INSERT", "voucher", "voucher_id", $guid, $cols, $vals);
    }
    
    public function regNewUser($data){
@@ -199,9 +200,13 @@ class database{
         $pdo = $this->connectdb();
         $pw_sha = sha1($pw);
         $query = 'UPDATE person SET `password` = "' .$pw_sha. '" WHERE  `e-mail` = "' .$mail . '"';
-        return $pdo ->prepare($query)->execute();
-        
-        
+        return $pdo ->prepare($query)->execute();     
+    }
+    
+    public function remUser($mail){
+        $pdo = $this->connectdb();
+        $query = 'DELETE * FROM person WHERE  `e-mail` = "' .$mail . '"';
+        return $pdo ->prepare($query)->execute();     
     }
 }
 
