@@ -47,6 +47,27 @@ abstract class modFst4UserAdmHelper {
         return $dbclass->checkUserPw($pw);
         
     }
+    
+    public static function remUser($mail){
+        jimport('joomla.user.helper');
+        $val = 1;
+        $db = JFactory::getDbo();
+        $query = $db->getQuery(true);
+        $query->update($db->quoteName('#__users'))
+              ->set($db->quoteName('block') . ' = ' . $db->quote($val))
+              ->where($db->quoteName('email') . ' = ' . $db->quote($mail));
+        $db->setQuery($query);
+        $result = $db->execute();
+        //log out user
+        $app = JFactory::getApplication();              
+        $user = JFactory::getUser();
+        $user_id = $user->get('id');            
+        $app->logout($user_id, array());
+        //execute DB Func
+        $dbclass = new database();
+        return $dbclass->remUser($mail);
+        
+    }
     public static function newUserPw($pw, $mail){
         //zuerst für joomla
         jimport('joomla.user.helper');

@@ -11,6 +11,13 @@ $userToken = JSession::getFormToken();
 $user = JFactory::getUser();
 $userdata = modFst4UserAdmHelper::getUserDetails($user->email);
 $url = JUri::getInstance();
+if(ISSET($_POST['mail_user'])){
+    $mail_del = $_POST['mail_user'];
+    $url = JURI::root();
+    modFst4UserAdmHelper::remUser($mail_del);
+    
+    header('Location: ' . $url);
+}
 if(ISSET($_POST['vorname'])){
         $data = array(
             "vorname" => $_POST['vorname'],
@@ -136,6 +143,10 @@ if(ISSET($_GET['msg'])){
 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#pwModal">
   Passwort ändern
 </button>
+        <form method="POST" action="#">
+            <input type="hidden" name="mail_user" value="<?php echo $user->email;  ?>">
+<button type="submit" class="btn btn-danger" id="btnRemUserAccount">Account löschen</button>
+        </form>
 </div>
 
 </div>
