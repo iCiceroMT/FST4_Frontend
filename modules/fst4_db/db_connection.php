@@ -116,6 +116,34 @@ class database{
        return $data;
    }
    
+      public function getFrontpageArticle(){
+       $pdo = $this->connectdb();
+       $type = "Kuchen";
+       $data = $pdo->query('SELECT a.article_id, a.price, a.description, a.creation, a.visible, a.shape_id, a.article_type_id, c.stars FROM article a
+                                     LEFT JOIN article_type b using(article_type_id)
+                                     LEFT JOIN rating c using(article_id)
+                                     WHERE b.description = "' .$type . '" ORDER BY stars DESC')->fetchAll(PDO::FETCH_ASSOC);
+       return $data;
+   }
+     
+         public function getFrontpageArticleNew(){
+       $pdo = $this->connectdb();
+       $type = "Kuchen";
+       $data = $pdo->query('SELECT a.article_id, a.price, a.description, a.creation, a.visible, a.shape_id, a.article_type_id, a.timestamp, c.stars FROM article a
+                                     LEFT JOIN article_type b using(article_type_id)
+                                     LEFT JOIN rating c using(article_id)
+                                     WHERE b.description = "' .$type . '" ORDER BY a.timestamp DESC')->fetchAll(PDO::FETCH_ASSOC);
+       return $data;
+   }
+   
+      public function getAllArticleWithType($type){
+       $pdo = $this->connectdb();
+       $data = $pdo->query('SELECT a.article_id, a.price, a.description, a.creation, a.visible, a.shape_id, a.article_type_id FROM article a
+                                     LEFT JOIN article_type b using(article_type_id)
+                                     WHERE b.description = "' .$type . '"')->fetchAll(PDO::FETCH_ASSOC);
+       return $data;
+   }
+   
    public function getArticleDetail($id){
        $pdo = $this->connectdb();
        $data = $pdo->query('SELECT * FROM article 
@@ -132,7 +160,7 @@ class database{
    
       public function getPackageDetail($id){
        $pdo = $this->connectdb();
-       $data = $pdo->query('SELECT * FROM package WHERE package_id = ' . $id)->fetchAll(PDO::FETCH_ASSOC);
+       $data = $pdo->query('SELECT * FROM package WHERE package_id = "' .$id . '"')->fetchAll(PDO::FETCH_ASSOC);
        return $data;
    }
    
@@ -204,9 +232,51 @@ class database{
     }
     
     public function remUser($mail){
+        
         $pdo = $this->connectdb();
-        $query = 'DELETE * FROM person WHERE  `e-mail` = "' .$mail . '"';
+        $query = 'UPDATE person SET `valid` = 0 WHERE  `e-mail` = "' .$mail . '"';
         return $pdo ->prepare($query)->execute();     
+    }
+    
+    public function getCakeConf(){
+        
+        $pdo = $this->connectdb();
+        $data = array();
+        $data['Kuchen'] = $pdo->query('SELECT a.article_id, a.description, a.price FROM article a
+                                     LEFT JOIN article_type b using(article_type_id)
+                                     WHERE b.description = "Kuchenteig"')->fetchAll(PDO::FETCH_ASSOC); 
+        $data['Form'] = $pdo->query('SELECT * FROM shape')->fetchAll(PDO::FETCH_ASSOC); 
+        $data['Füllung'] = $pdo->query('SELECT a.article_id, a.description, a.price FROM article a
+                                     LEFT JOIN article_type b using(article_type_id)
+                                     WHERE b.description = "Kuchenfüllung"')->fetchAll(PDO::FETCH_ASSOC); 
+        $data['Dekoration'] = $pdo->query('SELECT a.article_id, a.description, a.price FROM article a
+                                     LEFT JOIN article_type b using(article_type_id)
+                                     WHERE b.description = "Kuchendekoration"')->fetchAll(PDO::FETCH_ASSOC); 
+        $data['Verpackung'] = $pdo->query('SELECT a.article_id, a.description, a.price FROM article a
+                                     LEFT JOIN article_type b using(article_type_id)
+                                     WHERE b.description = "Verpackung"')->fetchAll(PDO::FETCH_ASSOC); 
+        $data['Abmessung'] = $pdo->query('SELECT a.article_id, a.description, a.price FROM article a
+                                     LEFT JOIN article_type b using(article_type_id)
+                                     WHERE b.description = "Abmessung" ORDER BY "a.description" DESC')->fetchAll(PDO::FETCH_ASSOC); 
+        return $data;
+    }
+    public function getCakeIngredient(){
+        $pdo = $this->connectdb();
+        $data = $pdo->query('SELECT * FROM ingredient WHERE ing_available = 1')->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
+    
+    public function getUnit($id){
+        $pdo = $this->connectdb();
+       $data = $pdo->query('SELECT * FROM ingredient WHERE ingredient_id = "' .$id . '"')->fetchAll(PDO::FETCH_ASSOC);
+        
+        return $data;
+    }
+        public function getArticlesRating($id){
+        $pdo = $this->connectdb();
+       $data = $pdo->query('SELECT * FROM rating WHERE article_id = "' .$id . '"')->fetchAll(PDO::FETCH_ASSOC);
+        
+        return $data;
     }
 }
 
