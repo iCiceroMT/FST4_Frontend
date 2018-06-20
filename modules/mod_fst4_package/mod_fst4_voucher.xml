@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3" client="site" method="upgrade">
+    <name>mod_fst4_package</name>
+    <license>GNU General Public License version 2 or later;</license>
+    <authorEmail>-</authorEmail>
+    <authorUrl>-</authorUrl>
+    <version>1.0</version>
+
+
+    
+
+    
+    
+    <files>
+        <filename module="mod_fst4_package">mod_fst4_package.php</filename>
+        <folder>tmpl</folder>
+
+        <filename>index.html</filename>
+        <filename>mod_fst4_package.xml</filename>
+        <filename>helper.php</filename>
+
+    </files>
+    
+
+    
+    
+    <config>
+        
+
+        
+    </config>
+
+    
+    
+</extension>
