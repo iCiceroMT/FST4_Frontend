@@ -86,6 +86,56 @@ abstract class modFst4UserAdmHelper {
         return $dbclass->newUserPw($pw, $mail);
         
     }
+    
+    public static function getCustomerOrders($username){
+        $dbclass = new database();
+        return $dbclass->getCustomerOrders($username);
+        
+    }
+    public static function getCustomerWrappings($username){
+        $dbclass = new database();
+        return $dbclass->getCustomerWrappings($username);
+        
+    }
+    public static function getCustomerRecipes($username){
+        $dbclass = new database();
+        return $dbclass->getCustomerRecipes($username);
+        
+    }
+    
+    public static function getOrderDetailAjax(){
+        $dbclass = new database();
+        $data = $_POST['id'];
+        return $dbclass->getOrderDetail($data);
+        
+    }
+    
+    public static function getRecipeDetailAjax(){
+        $dbclass = new database();
+        $data = $_POST['id'];
+        return $dbclass->getRecipeDetail($data);
+        
+    }
+    
+    public static function getRatingDetailAjax(){
+        $dbclass = new database();
+        $artid = $_POST['artid'];
+        $persid = $_POST['persid'];
+
+        return $dbclass->getRatingDetail($artid, $persid);
+        
+    }
+    
+    public static function doRatingAjax(){
+        $dbclass = new database();
+        $artid = $_POST['artid'];
+        $stars = $_POST['stars'];
+        $comment = $_POST['comment'];
+        $persid = $_POST['persid'];
+      
+        return $dbclass->doRating($artid, $stars, $comment, $persid);
+        
+    }
     /* public static function getItems(&$params)
       {
       // init db
