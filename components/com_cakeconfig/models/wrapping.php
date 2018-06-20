@@ -15,7 +15,7 @@ include_once './modules/fst4_db/db_connection.php';
  *
  * @since  0.0.1
  */
-class CakeConfigModelRecipe extends JModelItem
+class CakeConfigModelWrapping extends JModelItem
 {
     public static function getCakeConf(){
         $dbclass = new database();
@@ -26,20 +26,14 @@ class CakeConfigModelRecipe extends JModelItem
         $dbclass = new database();
         return $dbclass->getCakeIngredient();
     }
-
-    public static function getWrapping(){
+    
+       public static function getCakeWrapping($name){
         $dbclass = new database();
-        $data = array();
-        $user = JFactory::getUser();       
-        $app  = JFactory::getApplication();
-        $username = $user->username;
- 
-        $data2 = $dbclass->getWrappings();
-        array_push($data, $data2);
-        if($username != null){
-        $data3 = $dbclass->getCustomerWrappings($username);
-        array_push($data, $data3);
-        }
-        return $data;
-   }
+        return $dbclass->getCakeWrapping($name);
+    }
+    
+    public static function doWrappingAjax(){
+        $dbclass = new database();
+        return "successssss";
+    }
 }
