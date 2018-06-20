@@ -13,30 +13,28 @@ include_once './modules/fst4_db/db_connection.php';
 
 abstract class modFst4VoucherHelper {
 
-    public static function insertNewVoucherAjax() {
-        $value = $_POST['value'];
-       // echo "<script> console.log( 'Got in insertNewVoucher' ); </script>";
+    public static function insertNewVoucherAjax($value) {
+        // echo "<script> console.log( 'Got in insertNewVoucher' ); </script>";
         $dbclass = new database();
-        $chars = "abcdefghijkmnopqrstuvwxyz023456789"; 
-        srand((double)microtime()*1000000); 
-        $i = 0; 
-        $pass = '' ; 
+        $chars = "abcdefghijkmnopqrstuvwxyz023456789";
+        srand((double) microtime() * 1000000);
+        $i = 0;
+        $pass = '';
 
-        while ($i <= 7) { 
-            $num = rand() % 33; 
-            $tmp = substr($chars, $num, 1); 
-            $pass = $pass . $tmp; 
-            $i++; 
-        } 
 
-       //echo "<script> console.log( ".$code." ); </script>";
+        while ($i <= 7) {
+            $num = rand() % 33;
+            $tmp = substr($chars, $num, 1);
+            $pass = $pass . $tmp;
+            $i++;
+        }
+
+        //echo "<script> console.log( ".$code." ); </script>";
         $date = date("Y-m-d");
-       //echo "<script> console.log( 'Code: " . $code . " Date: ".$date."' ); </script>";
+        //echo "<script> console.log( 'Code: " . $code . " Date: ".$date."' ); </script>";
         return $dbclass->insertNewVoucher($value, $pass, $date);
         //return $value . '|' . $pass . '|' . $date;
     }
-
- 
 
     /* public static function getItems(&$params)
       {
