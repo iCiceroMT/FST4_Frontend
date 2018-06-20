@@ -7,7 +7,10 @@
  */
 // no direct access
 defined('_JEXEC') or die;
+$data = modFst4CakeConfigHelper::getCakeConf();
+
 ?>
+<div id="main_cont">
 <div><h2>Kuchen Konfigurator</h2>
 </div>
 <div class="row">
@@ -17,11 +20,19 @@ defined('_JEXEC') or die;
 
                 <!-- Select Basic -->
                 <div class="form-group">
-                  <label class="col-md-4 control-label" for="selectbasic">Kuchenart</label>
+                  <label class="col-md-4 control-label" for="selectbasic">Teigart</label>
                   <div class="col-md-4">
                     <select id="selectbasic" name="selectbasic" class="form-control">
-                      <option value="1">Option one</option>
-                      <option value="2">Option two</option>
+                       <?php
+                       foreach($data['Kuchen'] as $item){
+                       echo'
+                       <option value="'.$item['article_id'].'">'
+                       . $item['description'] .
+                       '</option>
+                       ';
+                       }
+                       
+                       ?>
                     </select>
                   </div>
                 </div>
@@ -31,8 +42,16 @@ defined('_JEXEC') or die;
                   <label class="col-md-4 control-label" for="selectbasic">Form</label>
                   <div class="col-md-4">
                     <select id="selectbasic" name="selectbasic" class="form-control">
-                      <option value="1">Option one</option>
-                      <option value="2">Option two</option>
+            <?php
+                       foreach($data['Form'] as $item){
+                       echo'
+                       <option value="'.$item['shape_id'].'">'
+                       . $item['description'] .
+                       '</option>
+                       ';
+                       }
+                       
+                       ?>
                     </select>
                   </div>
                 </div>
@@ -42,8 +61,17 @@ defined('_JEXEC') or die;
                   <label class="col-md-4 control-label" for="selectbasic">Befüllung</label>
                   <div class="col-md-4">
                     <select id="selectbasic" name="selectbasic" class="form-control">
-                      <option value="1">Option one</option>
-                      <option value="2">Option two</option>
+                        <option value="none">Keine</option>
+            <?php
+                       foreach($data['Füllung'] as $item){
+                       echo'
+                       <option value="'.$item['article_id'].'">'
+                       . $item['description'] .
+                       '</option>
+                       ';
+                       }
+                       
+                       ?>
                     </select>
                   </div>
                 </div>
@@ -53,8 +81,17 @@ defined('_JEXEC') or die;
                   <label class="col-md-4 control-label" for="selectbasic">Dekoration</label>
                   <div class="col-md-4">
                     <select id="selectbasic" name="selectbasic" class="form-control">
-                      <option value="1">Option one</option>
-                      <option value="2">Option two</option>
+                         <option value="none">Keine</option>
+            <?php
+                       foreach($data['Dekoration'] as $item){
+                       echo'
+                       <option value="'.$item['article_id'].'">'
+                       . $item['description'] .
+                       '</option>
+                       ';
+                       }
+                       
+                       ?>
                     </select>
                   </div>
                 </div>
@@ -72,8 +109,9 @@ defined('_JEXEC') or die;
                   <label class="col-md-4 control-label" for="selectbasic">Abmessung</label>
                   <div class="col-md-4">
                     <select id="selectbasic" name="selectbasic" class="form-control">
-                      <option value="1">Option one</option>
-                      <option value="2">Option two</option>
+                      <option value="1">Standard</option>
+                      <option value="2">Klein</option>
+                      <option value="2">Groß</option>
                     </select>
                   </div>
                 </div>
@@ -85,11 +123,9 @@ defined('_JEXEC') or die;
 
 <div class="row">
     <div class="col-md-6">
-        <a href="#">Eigenes Rezept erstellen</a>
+        <a class="link_recipe" href="#">Eigenes Rezept erstellen</a>
     </div>
-    <div class="col-md-6">
-        <a href="#">Erweiterte Konfiguration</a>
-    </div>
+
 </div>
 
 
@@ -105,8 +141,16 @@ defined('_JEXEC') or die;
                   
                   <div class="col-md-4">
                     <select id="selectbasic" name="selectbasic" class="form-control">
-                      <option value="1">Option one</option>
-                      <option value="2">Option two</option>
+            <?php
+                       foreach($data['Verpackung'] as $item){
+                       echo'
+                       <option value="'.$item['article_id'].'">'
+                       . $item['description'] .
+                       '</option>
+                       ';
+                       }
+                       
+                       ?>
                     </select>
                   </div>
                 </div>
@@ -121,5 +165,8 @@ defined('_JEXEC') or die;
 </div>
 
 <div id="kk_wk_btn">
-    <button class="btn btn-success" type="submit">Zum Warenkorb hinzufügen</button>
+    <div class="fp_btn_all">
+             <a href="">Zum Warenkorb hinzufügen</a>
+    </div>
+</div>
 </div>

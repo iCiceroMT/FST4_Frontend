@@ -13,7 +13,15 @@ include_once './modules/fst4_db/db_connection.php';
 
 abstract class modFst4CakeConfigHelper {
 
+    public static function getCakeConf(){
+        $dbclass = new database();
+        return $dbclass->getCakeConf();
+    }
     
+    public static function getCakeConfRecipeAjax(){
+        $dbclass = new database();
+        return $dbclass->getCakeConf();
+    }
 
     /* public static function getItems(&$params)
       {
