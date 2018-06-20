@@ -16,7 +16,7 @@ abstract class modFst4ProductHelper
       
     public static function getArticlesAjax(){
         $dbclass = new database();
-        return $dbclass->getAllArticle();
+        return $dbclass->getAllArticleWithType("Kuchen");
     }
     
       public static function getPackagesAjax(){
@@ -27,7 +27,20 @@ abstract class modFst4ProductHelper
       public static function getArticleDetailAjax(){
           $id = $_POST['id'];
         $dbclass = new database();
-        return $dbclass->getArticleDetail($id);
+        $data = $dbclass->getArticleDetail($id);
+        $user = JFactory::getUser();       
+        $app  = JFactory::getApplication();
+        $username = $user->username;
+ 
+        $data2 = $dbclass->getWrappings();
+        array_push($data, $data2);
+        if($username != null){
+        $data3 = $dbclass->getCustomerWrappings($username);
+        array_push($data, $data3);
+        }
+        
+        
+        return $data;
         
     }
     
@@ -35,6 +48,11 @@ abstract class modFst4ProductHelper
         $id = $_POST['id'];
         $dbclass = new database();
         return $dbclass->getPackageDetail($id);
+        
+    }
+           public static function getArticlesRating($id){
+        $dbclass = new database();
+        return $dbclass->getArticlesRating($id);
         
     }
    /* public static function getItems(&$params)

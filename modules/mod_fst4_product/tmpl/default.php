@@ -9,59 +9,41 @@
 // no direct access
 defined('_JEXEC') or die;
 
+$items = modFst4ProductHelper::getArticlesAjax();
+if(ISSET($_GET['do'])){
+    if($_GET['do'] == "reload"){
+            
+                header('Location: http://wi-gate.technikum-wien.at:60336/index.php/fertige-kuchen');
+        
+            }
 
-
+    }
 ?>
 
-<div id="main_shortmenu" style=" width: 80%; height:180px;margin-left:auto; margin-right:auto;vertical-align: middle; display: table-cell; background: white; padding-left:10px; padding-right:10px;">
-    <div id="menubox" style="">
-        <div class="row">
-            <div class="col-xs-4">
-                <div class="row">
-                    <div class="col-xs-4 auswahlpic" id="apic1">
-                                 <img src="/images/main_pics/iconbox1.jpg">
-                    </div>
-                    <div class="col-xs-8 main_auswahl_text">
+<h1>Fertige Kuchen</h1>
 
-                        <h3>Fertige Kuchen</h3>
-                        <p>
-                        Beste Torten, Kuchen und andere Leckereien mit viel Liebe gebacken
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-4">
-                <div class="row">
-                    <div class="col-xs-4 auswahlpic" id="apic2">
-                        <img src="/images/main_pics/iconbox2.jpg">
-                    </div>
-                    <div class="col-xs-8 main_auswahl_text">
 
-                        <h3>Pakete</h3>
-                        <p>
-                            Mehrere köstliche Produkte zu einem Paket zusammengeschnürt
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-4">
-                <div class="row">
-                    <div class="col-xs-4 auswahlpic" id="apic3">
-                        <img src="/images/main_pics/iconbox3.jpg">
-                    </div>
-                    <div class="col-xs-8 main_auswahl_text">
+<div class="container" id="main_product_load">
+    <?php 
+    $x = 0;
+    for($i = 0; $i < ceil(count($items) / 4); $i++){  
+        echo '<div class="row" id="fertigeKuchen">';
+            
+                    for($o = 0; $o < 4; $o++){    
+                     if($x < count($items)){
+                         $rating = modFst4ProductHelper::getArticlesRating($items[$x]["article_id"]);
+                         $cntrating = 0;
+                         $cnti = 1;
+                         foreach($rating as $iitem){$cntrating += $iitem['stars']; $cnti++;}
+                         if($cnti > 1){$cnti --;};
+                         echo '<div class="col-md-3">'
+                         . '<div class="productbox" ><img class="fertigekuchenBilder" src="/./images/artikelbilder/artikel/' . $items[$x]["article_id"] . '.jpg" width="200px">' .'</br>'.'<h4 class=producttitle>'. $items[$x]["description"] .'</h4>';
+                          echo  '<p class="productprice">Preis: € ' . $items[$x]["price"].'</p>' ;
+                         for($ii = 1; $ii <= 5; $ii++ ){if($ii <= $cntrating / $cnti){ echo '<span class="fa fa-star checked"></span>'; }else{ echo '<span class="fa fa-star"></span>';}}
+                          echo '</br><div class="fp_btn_all"><a type="button"  id="' . $items[$x]["article_id"] . '"  class="btn btn-warning do_product_detail">Details</a></div>' . '</div></div>';} 
+                      $x++;
+                    }
 
-                        <h3>Sonstiges</h3>
-                        <p>Was wir sonst noch für Sie zusammengestellt haben
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        </div>
-    </div>
-</div>
-
-<div id="main_product_load" style="height: auto;">
+        echo '</div>';
+            } ?>
 </div>

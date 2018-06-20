@@ -17,8 +17,8 @@ echo '
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-5">
-            <p>Bezeichnung: ' . $pdetails[0]["description"] . '</p>
-            <p>Preis: ' . $pdetails[0]["price"] . '</p>
+            <h2 id="productdetail">Bezeichnung: ' . $pdetails[0]["description"] . '<br/>
+            <h2 id="productdetail">Preis in €: ' . $pdetails[0]["price"] . '<br/>
 
         </div>
         <div class="col-md-3">
@@ -29,7 +29,7 @@ echo '
 </div>
 
 <div>
-<button type="button" class="btn btn-success">In den Warenkorb</button>
+<div class="fp_btn_all"><a type="button" class="fp_btn_all">In den Warenkorb</a></div>
 <a class="btn btn-info" href="./index.php" role="button">Zurück</a>
 </div>
 
