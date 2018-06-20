@@ -30,52 +30,52 @@ $data = array(
 ?>
 
 <div class="container" id="RegDiv" style="">
-    <h1 class="well">Registrierung</h1>
+    <h1 class="well" id="registry" text-align="center">Registrierung</h1>
     <div class="col-lg-12 well">
         <div class="row">
             <form  action="<?php echo $uri; ?>?do=reg" method="post">
                 <div class="col-sm-12">
                     <div class="row">
                         <div class="col-sm-6 form-group">
-                            <label>Vorname</label>
+                            <label class="Registrierung">Vorname</label>
                             <input name="vorname" type="text" class="form-control">
                         </div>
                         <div class="col-sm-6 form-group">
-                            <label>Nachname</label>
+                            <label class="Registrierung">Nachname</label>
                             <input name="nachname" type="text" class="form-control">
                         </div>
                     </div>					
                     <div class="form-group">
-                        <label>Addresse</label>
+                        <label class="Registrierung">Addresse</label>
                         <textarea name="addresse" rows="3" class="form-control"></textarea>
                     </div>	
                     <div class="row">
                         <div class="col-sm-4 form-group">
-                            <label>Stadt</label>
+                            <label class="Registrierung">Stadt</label>
                             <input name="stadt" type="text" class="form-control">
                         </div>	
                         <div class="col-sm-4 form-group">
-                            <label>Postleitzahl</label>
+                            <label class="Registrierung">Postleitzahl</label>
                             <input name="plz" type="text" class="form-control">
                         </div>		
                     </div>
                     <div class="row">
                     <div class="col-sm-4 form-group">
-                        <label>Telefonnummer</label>
+                        <label class="Registrierung">Telefonnummer</label>
                         <input name="tel" type="text" class="form-control">
                     </div>	
                      <div class="col-sm-4 form-group">
-                        <label>Geburtsdatum</label>
+                        <label class="Registrierung">Geburtsdatum</label>
                         <input name="bdate" type="date" class="form-control">
                     </div>
                     </div>
                     <div class="row">
                     <div class="col-sm-4 form-group">
-                        <label>Email-Addresse</label>
+                        <label class="Registrierung">Email-Addresse</label>
                         <input name="mail" type="text" class="form-control">
                     </div>
                       <div class="col-sm-4 form-group">
-                        <label for="sel1">Land</label>
+                        <label class="Registrierung" for="sel1">Land</label>
                         <select class="form-control" name="country" id="sel1">
                           <option>Österreich</option>
                           <option>Deutschland</option>
@@ -84,14 +84,16 @@ $data = array(
                       </div> 
                     </div>
                     <div class="form-group">
-                        <label>Passwort</label>
+                        <label class="Registrierung">Passwort</label>
                         <input name="pw1" type="password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Passwort wiederholen</label>
+                        <label class="Registrierung">Passwort wiederholen</label>
                         <input name="pw2" type="password" class="form-control">
                     </div>
-                    <button type="submit">Registrieren</button>					
+             <div class="fp_btn_all">
+                    <a type="submit">Registrieren</a>
+             </div>
                 </div>
             </form> 
         </div>
