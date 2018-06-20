@@ -1,0 +1,540 @@
+
+/*Überschrift Kassa im Checkout*/
+html.com_content.view-article.itemid-117.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod103.t3-module.module div.module-inner div#CheckoutDiv h1{
+    font-family: Pacifico, sans-serif;
+    font-size: 40px;
+    color: #e47277;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/*Überschrift Ihre Bestellung im Checkout*/
+html.com_content.view-article.itemid-117.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod103.t3-module.module div.module-inner div#CheckoutDiv h2{
+    font-family: Pacifico, sans-serif;
+    font-size: 40px;
+    color: #e47277;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/*überschrift WK*/
+html.com_content.view-article.itemid-117.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod103.t3-module.module div.module-inner div.module-ct div#ShopppingCartDiv h1{
+    font-family: Pacifico, sans-serif;
+    font-size: 40px;
+    color: #e47277;
+    margin-bottom: 30px;
+    text-align: center; 
+}
+
+html.com_content.view-article.itemid-101.home.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod106.t3-module.module div.module-inner div.module-ct div div.row div#frontpage_article_div.col-md-3 div.row div h2 a{
+    color:#e47277; 
+}
+
+html.com_content.view-article.itemid-101.home.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod106.t3-module.module div.module-inner div.module-ct div div.row div#frontpage_article_div.col-md-3 div.row div{
+    text-align: center;   
+}
+
+html.com_content.view-article.itemid-101.home.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-2 div.container div.t3-spotlight.t3-spotlight-2.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod108.t3-module.module div.module-inner div.module-ct div div.row div#frontpage_article_div.col-md-3 div.row div{    
+    text-align: center;   
+}
+
+html.com_content.view-article.itemid-101.home.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-2 div.container div.t3-spotlight.t3-spotlight-2.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod108.t3-module.module div.module-inner div.module-ct div div.row div#frontpage_article_div.col-md-3 div.row div h2 a{
+    color:#e47277;    
+}
+
+html.com_content.view-article.itemid-105.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod96.t3-module.module div.module-inner div.module-ct h1{  
+    font-family: Pacifico, sans-serif;
+    font-size: 40px;
+    color: #e47277;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/*überschrift kuchenkonfigurator*/
+html.com_cakeconfig.view-cakeconfig.itemid-104.j38.mm-hover.no-touch body div.t3-wrapper.corporate div#t3-mainbody.container.t3-mainbody div.row div#t3-content.t3-content.col-xs-12 div#main_cont div h2{
+    font-family: Pacifico, sans-serif;
+    font-size: 40px;
+    color: #e47277;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+/*fertige kuchen produktbox*/
+.productbox{
+    height: 280px;
+    margin:auto;
+    text-align: center;
+    margin-bottom: 24px;
+    border-color: #d8d8d8 ;
+    border-radius: 3px;
+    width:202px;
+}
+
+/*produkttitel fertige kuchen*/
+.produkttitel{
+    font-size: 14px;
+    font-family: Pacifico,sans-serif;
+    color:#e47277
+}
+
+html.com_content.view-article.itemid-105.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod96.t3-module.module div.module-inner div.module-ct div#main_product_load.container div.row div.col-md-3 div.productbox h4.producttitle{
+    font-size: 14px;
+    font-family: Pacifico,sans-serif;
+    color:#e47277;
+    margin-bottom: 10px;
+}
+
+html.com_content.view-article.itemid-105.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod96.t3-module.module div.module-inner div.module-ct div#main_product_load.container div.row div.col-md-3 div.productbox p{
+
+    font-style: italic;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/*stern*/
+html.com_content.view-article.itemid-105.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod96.t3-module.module div.module-inner div.module-ct div#main_product_load.container div.row div.col-md-3 div.productbox span.fa.fa-star{
+    margin-bottom: 10px;
+}
+
+/*preis schrift fertige kuchen*/
+
+.productprice{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #69320B;
+    font-size: 16px;
+    font-style: oblique;
+}
+
+/*Registrierungsseite*/
+
+/*Überschrift regsitry*/
+html.com_content.view-article.itemid-115.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod101.t3-module.module div.module-inner div.module-ct div#RegDiv.container h1.well{
+
+    font-family: Pacifico, sans-serif;
+    font-size: 40px;
+    color: #e47277;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/*formular hintergrund und border color*/
+html.com_content.view-article.itemid-115.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod101.t3-module.module div.module-inner div.module-ct div#RegDiv.container{
+
+    background-color: #e47277;
+}
+
+.Registrierung{  
+    color:#e47277;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+
+}
+/*footer verstecken von t3 template*/
+#t3-footer{
+    visibility: hidden;
+}
+/*effekt bei den bildern von fertigen kuchen*/
+.fertigekuchenBilder{
+    opacity: 1;
+    -webkit-transition: 2s ease-in-out;
+    transition: 2s ease-in-out;
+    border-radius: 2px;
+}
+/*effekt bei den bildern von fertigen kuchen*/
+.fertigekuchenBilder:hover{
+    opacity: .5;
+    transition: .4s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    border-radius: 2px;
+}
+
+#fertigeKuchen{
+
+    margin-bottom: 30px;
+}
+
+
+/*BUTTONS*/
+
+.fp_btn_all {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    lay: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.fp_btn_all a {
+    display: inline-block;
+    background-color: #e47277;
+    border: 1px solid #e47277;
+    padding: 8px 23px;
+    font-family: Roboto Slab;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.fp_btn_all a:hover {
+    background-color: #ffffff;
+    color: #e47277;
+}
+
+.fp_btn_back {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.fp_btn_back a {
+    display: inline-block;
+    background-color: #d8d8d8;
+    border: 1px solid grey;
+    padding: 8px 23px;
+    font-family: Roboto Slab;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.fp_btn_back a:hover {
+    background-color: transparent;
+    color: #e47277;
+}
+
+
+.fp_btn_fertigeKuchen a {
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #e47277;
+    padding: 8px 23px;
+    font-family: Roboto Slab;
+    color: #e47277;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.fp_btn_fertigeKuchen a:hover {
+    background-color: #e47277;
+    color: #ffffff;
+}
+
+
+
+.h1_fertigePakete{
+    font-family: Pacifico, sans-serif;
+    font-size: 40px;
+    color: #e47277;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/*anpassungen user administrattion*/
+.h2_useradmin{
+    font-family: Pacifico, sans-serif;
+    font-size: 40px;
+    color: #e47277;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/*glyphicon beim logout*/
+.glyphicon-log-out{
+    color: #eee;
+    height:15px;
+}
+
+.userinformation{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #69320B;
+    font-size: 14px;
+    font-style: oblique;
+}
+
+.zentrierterText{
+    text-align: center;
+}
+
+.zentrierteTabs{
+    text-align: center;
+}
+
+#zentriert{
+    text-align: center;
+}
+
+#usadm_persDat_div{
+
+    text-align: left;
+}
+
+.fp_btn_useradm{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    lay: inline-block;
+    /*width: 100%;*/
+    text-align: center;
+}
+
+.fp_btn_useradm a{
+    display: inline-block;
+    background-color:#e47277 ;
+    border: 1px solid #e47277;
+    padding: 8px 23px;
+    font-family: Roboto Slab;
+    color:#ffffff ;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/*.fp_btn_useradm a:hover{
+    background-color: #ffffff;
+    color:#e47277 ;
+    
+}*/
+
+
+
+/*gutscheine*/
+
+/*überschrift gutscheine*/
+html.com_content.view-article.itemid-107.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod99.t3-module.module div.module-inner div.module-ct div h1{
+    font-family: Pacifico, sans-serif;
+    font-size: 40px;
+    color: #e47277;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.gutscheine{
+    text-align: center;
+}
+
+
+.gutscheinBilder{
+    opacity: 1;
+    -webkit-transition: 2s ease-in-out;
+    transition: 2s ease-in-out;
+    margin-bottom:10px;
+    width:250px;
+    height:150px;
+}
+/*effekt bei den bildern von gutscheinen*/
+.gutscheinBilder:hover{
+    opacity: .5;
+    transition: .4s ease-in-out;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+/*input feld gutscheine*/
+.inputs{
+    padding-right: 30px;
+    width:250px;
+    text-align: center;
+}
+.form-control{
+    width:250px;
+}
+
+/*buttons details packages*/
+#buttonsDetails{
+    display:inline-block;
+}
+
+/*REgistrierung schrift zentriert*/
+#registry{
+    text-align: center;
+}
+
+
+/*startseite button back to top*/
+
+html.com_content.view-article.itemid-101.home.j38.mm-hover.no-touch body div.t3-wrapper.corporate div#back-to-top.back-to-top.hidden-xs.hidden-sm.affix{
+    background-color: #e47277;
+
+}
+html.com_content.view-article.itemid-101.home.j38.mm-hover.no-touch body div.t3-wrapper.corporate div#back-to-top.back-to-top.hidden-xs.hidden-sm.affix button.btn.btn-primary{
+    background-color: #e47277;
+}
+
+/*fertige Kuchenseite button back  to top*/
+html.com_content.view-article.itemid-105.j38.mm-hover.no-touch body div.t3-wrapper.corporate div#back-to-top.back-to-top.hidden-xs.hidden-sm.affix{
+    background-color: #e47277;
+
+}
+
+html.com_content.view-article.itemid-105.j38.mm-hover.no-touch body div.t3-wrapper.corporate div#back-to-top.back-to-top.hidden-xs.hidden-sm.affix button.btn.btn-primary{
+    background-color: #e47277;
+}
+
+/*gutscheine darstellung*/
+
+.voucher_formgroup{
+    width:250px;
+    text-align: center;
+    display: block;
+}
+
+/*Login Form anpassungen*/
+
+/*überschrift login form*/
+.module-title{
+
+    font-family: Pacifico, sans-serif;
+    font-size: 40px;
+    color: #e47277;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/*.t3-spotlight.t3-spotlight-1{
+    text-align: center;
+}*/
+
+html.com_content.view-article.itemid-108.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container{
+    text-align: center;
+}
+
+.module-ct{
+    text-align: left;
+}
+/*Package details*/
+#productdetail{
+
+    font-family: Pacifico, sans-serif;
+    font-size: 20px;
+    color: #e47277;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+#productprice{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #69320B;
+    font-size: 14px;
+    font-style: oblique;
+
+}
+
+
+/*Login Buttons*/
+
+.fp_btn_login {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    lay: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.fp_btn_all a {
+    display: inline-block;
+    background-color: #e47277;
+    border: 1px solid #e47277;
+    padding: 8px 23px;
+    font-family: Roboto Slab;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.fp_btn_all a:hover {
+    background-color: #ffffff;
+    color: #e47277;
+}
+
+#form-login-remember{
+    display: inline;
+}
+
+#login-form{
+    text-align: center;
+}
+
+.forgot_un{
+
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #69320B;
+    font-size: 12px;
+    font-style: oblique;
+    text-decoration: none;
+}
+
+.forgot_pwd{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #69320B;
+    font-size: 12px;
+    font-style: oblique;
+    text-decoration: none;
+}
+
+.remember{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #69320B;
+    font-size: 14px;
+
+    text-decoration: none;
+}
+
+/*register seite button to top*/
+
+html.com_content.view-article.itemid-115.j38.mm-hover.no-touch body div.t3-wrapper.corporate div#back-to-top.back-to-top.hidden-xs.hidden-sm.affix button.btn.btn-primary{
+    background-color: #e47277;
+
+}
+
+.delete{
+
+    margin-top: 20px;
+}
+
+.modal-title{
+    font-family: Pacifico, sans-serif;
+    font-size: 20px;
+    color: #e47277;
+    margin-bottom: 30px;
+    text-align: left;  
+}
+
+.modal-dialog{
+    width:350px;
+
+}
+
+
+.html.com_content.view-article.itemid-107.j38.mm-hover.no-touch body div.t3-wrapper.corporate div.wrap.t3-sl.t3-sl-1 div.container div.t3-spotlight.t3-spotlight-1.row div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div#Mod99.t3-module.module div.module-inner div.module-ct div div div.col-md-4 form div.form-group.voucher_formgroup input#amount.form-control{
+
+    width:250px;
+}
+
+
+/*Override damit die Inputfields die selbe breite wie das div haben*/
+@media screen and (min-width: 768px) {
+    select,
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    .inputbox {
+        width: 250px;
+    }
+}
+
