@@ -38,6 +38,8 @@ $data = array(
             </div>
         </div>
         <a href="#" id="RegLink">Noch kein Kunde? Hier geht's zur Registrierung!</a>
-        <button type="submit" id="loginBtn">Anmelden</button>
+        <div class="fp_btn_all">
+        <a type="submit" id="loginBtn">Anmelden</a>
+        </div>
     </form>
 </div>
